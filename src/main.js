@@ -9,6 +9,7 @@ app.use(express.urlencoded({ extended: true }))
 app.engine('hbs', exphbs({
     extname: "hbs",
 }));
+
 app.set('view engine', 'hbs')
 
 app.get('/', (req, res) =>{
