@@ -24,7 +24,7 @@ class ProductController {
     }
 
     getById(id) {
-        return PRODUCTS_DB.filter((product) => product.id === parseInt(id))[0]
+        return PRODUCTS_DB.filter((product) => product.id === parseInt(id))
     }
 
     update(id, data) {

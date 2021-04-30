@@ -28,10 +28,7 @@ router.put("/:id", (req, res) => {
 router.get("/:id", (req, res) => {
     const { id } = req.params
     const currentProduct = product.getById(id)
-    if (currentProduct) {
-        return res.json(currentProduct)
-    }
-    res.status(404).json({ error: "producto no encontrado" })
+    res.render("products", {Productos: currentProduct})
 })
 
 router.delete("/:id", (req, res) => {
